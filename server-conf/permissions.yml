@@ -1,0 +1,19 @@
+record:
+  "*":
+    create: true
+    write: true
+    read: true
+    delete: true
+    listen: true
+  "cards/.*":
+    write: "data.owner === user.id || user.data.role === 'scrum-master'"
+    delete: "user.data.role === 'scrum-master'"
+event:
+  "*":
+    publish: true
+    subscribe: true
+    listen: true
+rpc:
+  "*":
+    provide: true
+    request: true

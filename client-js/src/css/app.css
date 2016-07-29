@@ -1,0 +1,130 @@
+body {
+    background-image: url('../assets/white-board-background.jpg');
+    background-size: cover;
+}
+
+.board {
+    position: relative
+}
+
+/** LOGIN **/
+.login{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba( 255, 255, 255, 0.8 );
+}
+
+.login *{
+    font: 12px Arial, sans-serif;
+}
+
+.login.login-error form {
+    border: 1px solid #c7254e;
+}
+
+.login form{
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.login form input[type=text],
+.login form input[type=password]{
+    width: 100%;
+    border: 1px solid #ddd;
+    box-shadow: inset 1px 1px 4px rgba( 0, 0, 0, 0.1 );
+    padding: 5px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.login form input[type=submit]{
+    border: none;
+    background: #666;
+    color: #fff;
+    padding: 5px 10px;
+    float: right;
+    cursor: pointer;
+}
+
+.login form input[type=submit]:hover{
+    background: #888;
+}
+
+@media (min-width: 801px) {
+    .header {
+        position: fixed;
+        top: 0;
+        z-index: 3;
+        color: white;
+        height: 35px;
+        width: 100%;
+        background-color: #ccc;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.7);
+    }
+    .login form{
+        margin-top: 200px;
+    }
+    .board {
+        margin-top: 35px;
+        min-height: calc( 100% - 35px);
+    }
+    .header-title {
+        font-size: 18px;
+        position: relative;
+        top: 5px;
+        font-family: 'Permanent Marker', cursive;
+    }
+    .add-cards-wrapper {
+        position: fixed;
+        top: 0;
+        right: 20px;
+        z-index: 3;
+    }
+
+    .eraser {
+        background-size: 100px 50px;
+        background-image: url('../assets/eraser.png');
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        width: 100px;
+        height: 50px;
+        cursor: pointer;
+    }
+}
+@media (max-width: 800px) {
+    .login form{
+        margin-top: 50px;
+    }
+    .header {
+        display: none;
+    }
+    .board {
+        padding-bottom: 125px;
+        height: 100%;
+    }
+    .add-cards-wrapper {
+        width: 100%;
+        background-color: #ccc;
+        position: fixed;
+        bottom: 0;
+        z-index: 2;
+    }
+    .add-cards {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        max-width: 1000px;
+    }
+     .eraser {
+        display: none;
+     }
+}

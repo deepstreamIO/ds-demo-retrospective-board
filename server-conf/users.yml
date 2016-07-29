@@ -1,0 +1,8 @@
+john:
+  password: "qQoEMakcnxfq6AQhQl2N9XiIke/JjTqDh+x7OMd5XQE=gEwXQZOWaHilsZ0fpllcOA==" #password
+  serverData:
+    role: developer
+bob:
+  password: "qQoEMakcnxfq6AQhQl2N9XiIke/JjTqDh+x7OMd5XQE=gEwXQZOWaHilsZ0fpllcOA==" #password
+  serverData:
+    role: scrum-master

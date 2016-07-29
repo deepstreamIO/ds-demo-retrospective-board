@@ -1,0 +1,119 @@
+/**
+ * Postit
+ */
+.card {
+    position: relative;
+    display: inline-block;
+}
+.card-header {
+    position: absolute;
+    width: 100%
+}
+.card-copy {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    height: 125px;
+    outline: none;
+    border: none;
+    resize: none;
+}
+.card-inner:after {
+    content: "";
+    height: 55%;
+    position: absolute;
+    width: 50%;
+    z-index: -2;
+    transform: skew(-8deg) rotate(-6deg);
+    bottom: 16px;
+    left: 10px;
+    box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.5);
+}
+.card-inner {
+    line-height: 60px;
+    height: 80px;
+    width: 90px;
+}
+
+/**
+ * Large Postit
+ */
+.large-card .card-header {
+    height: 30px;
+}
+.large-card .card-inner {
+    min-height: 200px;
+    min-width: 200px;
+    padding: 45px 20px 10px;
+    border-radius: 0 0 0 200px/0 0 0 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.large-card .card-copy {
+    font-size: 25px;
+    font-family: 'Reenie Beanie', cursive;
+}
+
+/**
+ * Small Postit
+ */
+.small-card {
+    display: inline-block;
+    transform: rotate(3deg);
+}
+.small-card .card-inner {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Permanent Marker', cursive;
+    padding: 12px 10px 5px;
+    border-radius: 0 0 0 200px/0 0 0 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+/**
+ * Colors
+ */
+[data-type="sad"] .card-inner {
+    background-image: -webkit-linear-gradient(top, #b0e1ec 15%, #baebf6 20%, #baebf6 33%);
+}
+[data-type="happy"] .card-inner {
+    background-image: -webkit-linear-gradient(top, #f5e38c 15%, #ffed96 20%, #ffed96 33%);
+}
+[data-type="mad"] .card-inner {
+    background-image: -webkit-linear-gradient(top, #e6a7a8 15%, #f0b1b2 20%, #f0b1b2 33%);
+}
+
+/**
+ * Devices
+ */
+@media (min-width: 801px) {
+    .card {
+        margin: 20px;
+    }
+    .card-header {
+        cursor: grab;
+        cursor: -webkit-grab;
+    }
+    .large-card {
+        width: 200px;
+    }
+    .small-card {
+        margin: 10px;
+    }
+}
+@media (max-width: 800px) {
+    .large-card {
+        display: block;
+        margin: 20px auto;
+        width: 75%;
+    }
+    .large-card .card-inner {
+        width: 100%;
+    }
+    .large-card .card-inner:after {
+        bottom: 30px;
+    }
+    .small-card {
+        max-width: 29%;
+        margin: -20px 5px 10px 5px;
+        cursor: pointer;
+    }
+}

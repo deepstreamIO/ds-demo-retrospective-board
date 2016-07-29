@@ -1,0 +1,20 @@
+# General
+libDir: ../lib  # Directory where all plugins reside
+
+#Authentication
+auth:
+# reading users and passwords from a file
+  type: file
+  options:
+    path: ./users.yml # Path to the user file. Can be json, js or yml
+    hash: 'md5' # the name of a HMAC digest algorithm
+    iterations: 100 # the number of times the algorithm should be applied
+    keyLength: 32 # the length of the resulting key
+
+# Permissioning
+permission:
+  type: config # Only config or custom permissionHandler at the moment
+  options:
+    path: ./permissions.yml # Path to the permissionFile. Can be json, js or yml
+    maxRuleIterations: 3 # Amount of times nested cross-references will be loaded. Avoids endless loops
+    cacheEvacuationInterval: 60000 # PermissionResults are cached to increase performance. Lower number means more loading

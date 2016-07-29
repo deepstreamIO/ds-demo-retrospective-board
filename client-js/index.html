@@ -1,0 +1,76 @@
+<html lang="en"><head>
+	<meta charset="UTF-8">
+	<title>PostIt Board</title>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='https://fonts.googleapis.com/css?family=Reenie+Beanie' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="src/css/reset.css" type="text/css" media="all">
+	<link rel="stylesheet" href="src/css/card.css" type="text/css" media="all">
+	<link rel="stylesheet" href="src/css/app.css" type="text/css" media="all">
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://rawgit.com/deepstreamIO/deepstream.io-client-js/master/dist/deepstream.min.js"></script>
+</head>
+
+<body>
+
+	<div class="header">
+		<span class="header-title">
+			RETROSPECTIVE WHITEBOARD
+		</span>
+	</div>
+
+	<div data-nav class="board">
+
+	<div class="login">
+		<form action="#">
+			<input type="text" placeholder="username"/>
+			<input type="password" placeholder="password"/>
+			<input type="submit" value="login" />
+		</form>
+	</div>
+
+	</div>
+
+	<div class="add-cards-wrapper">
+		<span class="add-cards">
+			<div class="card small-card" data-type="happy">
+				<div class="card-header">
+				</div>
+				<div class="card-inner">
+					GLAD
+				</div>
+			</div>
+
+			<div class="card small-card" data-type="sad">
+				<div class="card-header">
+				</div>
+				<div class="card-inner">
+					SAD
+				</div>
+			</div>
+
+			<div class="card small-card" data-type="mad">
+				<div class="card-header">
+				</div>
+				<div class="card-inner">
+					MAD
+				</div>
+			</div>
+		</span>
+	</div>
+
+	<div class="eraser">
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.js"></script>
+	<script type="text/babel" src="src/js/card.js"></script>
+	<script type="text/babel" src="src/js/board.js"></script>
+	<script type="text/babel" src="src/js/app.js"></script>
+</body>
+
+</html>
