@@ -1,6 +1,6 @@
 ## A tutorial on how to create a retrospective board
 
-With more and more teams working remote,, tools have started emerging to move processes online. But the fun part behind behind retrospectives, planning poker and other methods was always the interactivity, seeing cards move around and barely readable scribbles.
+With more and more teams working remote, tools have started emerging to move processes online. But the fun part behind retrospectives, planning poker and other methods was always the interactivity, seeing cards move around and barely readable scribbles.
 
 As such, let's take a look at how we can use data-sync to create a realtime retrospective board that supports both destops and mobile phones.
 
