@@ -6,8 +6,7 @@ record:
     delete: true
     listen: true
   "cards/.*":
-    write: "data.owner === user.id || user.data.role === 'scrum-master'"
-    delete: "user.data.role === 'scrum-master'"
+    write: "data.owner === user.id || user.serverData.role === 'scrum-master'"
 event:
   "*":
     publish: true
